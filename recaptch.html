@@ -1,0 +1,70 @@
+      
+                <th>   <input type="checkbox" name="super"  onChange="myFunction()"> Agree !</th>
+
+                    <form action="?" method="POST">
+                            <div id="html_element"></div>
+                            <br>
+                       <button class="btn btn-info" id="sub" onChange="recaptch()" disabled>sub</button>
+                       </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- js code  -->
+
+<script type="text/javascript">
+
+function myFunction(){ 
+if( $('input[name=super]').is(':checked') && recaptch() == true ){
+    $('#sub').removeAttr('disabled');
+  }else{
+    $('#sub').attr('disabled',true);
+  }
+}
+
+/* recaptch from google !*/
+var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '6LdN6WcbAAAAAM2QA_wlF9LGdIVmUeakLQjYpfdF',
+          'callback' :recaptch ,
+        });
+      };
+
+
+function recaptch() {
+    var googleResponse = jQuery('#g-recaptcha-response').val();
+    if (googleResponse && $('input[name=super]').is(':checked') ) {
+        $('#sub').removeAttr('disabled');
+        return true;
+    } else {
+    
+    return false;
+    }
+  
+}
+</script>
+    
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+    
+<!-- css code  -->
+<style type="text/css">
+    #vd{
+display: ;
+}
+#btnimg{
+    width: 10px;
+}
+</style>
