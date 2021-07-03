@@ -1,21 +1,12 @@
       
-                <th>   <input type="checkbox" name="super"  onChange="myFunction()"> Agree !</th>
+                   
+<p><input type="checkbox" name="super"  onChange="myFunction()"> Agree !</p>
 
-                    <form action="?" method="POST">
+                      <form action="?" method="POST">
                             <div id="html_element"></div>
                             <br>
-                       <button class="btn btn-info" id="sub" onChange="recaptch()" disabled>sub</button>
+                       <button class="btn btn-info" id="sub" onChange="recaptch()" disabled>Submit</button>
                        </form>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -36,7 +27,7 @@ if( $('input[name=super]').is(':checked') && recaptch() == true ){
 /* recaptch from google !*/
 var onloadCallback = function() {
         grecaptcha.render('html_element', {
-          'sitekey' : '6LdN6WcbAAAAAM2QA_wlF9LGdIVmUeakLQjYpfdF',
+          'sitekey' : 'your site_kye here!',
           'callback' :recaptch ,
         });
       };
@@ -59,12 +50,3 @@ function recaptch() {
         async defer>
     </script>
     
-<!-- css code  -->
-<style type="text/css">
-    #vd{
-display: ;
-}
-#btnimg{
-    width: 10px;
-}
-</style>
